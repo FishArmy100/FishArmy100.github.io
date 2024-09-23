@@ -9,29 +9,145 @@
 <nav>
     <ul>
         <li><a href="#hero">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="#contact">Contact Me</a></li>
+        <li><a href="javascript:scroll_to('about');">About</a></li>
+        <li><a href="javascript:scroll_to('projects');">Projects</a></li>
+        <li><a href="javascript:scroll_to('resume');">Resume</a></li>
+        <li><a href="javascript:scroll_to('contact');">Contact Me</a></li>
     </ul>
 </nav>
 <main>
     <section id="hero">
-        <img src="images/portrait.png">
+        <a href="images/portrait.png">
+            <img src="images/portrait.png" class="hoverable-item">
+        </a>    
         <h1>Nathanael A. Craver</h1>
     </section>
     <section id="about" class="content">
-        <h1>Here is the About Section</h1>
+        <h1>About</h1>
+        <h3>Intro:</h3>
+        <p>
+            Hi! My name is Nate Craver, and I am a Software Developer from North East Ohio with 7 years of experience. 
+            I specialize in backend development, however I do have some experience with frontend development. 
+            I also am currently looking for summer internship, or employment for a software development position.
+        </p>
+        <h3>Background</h3>
+        <p>
+            I started programming back in 2017 when I was 14 years old, beginning with basic c# console apps.
+            After that, I migrated to the Unity Game engine, where I worked on various (unfinished) games.
+        </p>
+        <p>
+            Some Genres that I attempted were:
+            <ul>
+                <li>A city builder with procedurally generated terrain</li>
+                <li>A tower defense game with a procedural tile map, and upgradeable towers</li>
+                <li>A 2d circuit building game, that you could make miniature computers with</li>
+                <li>A multiplayer third person shooter, where you drove around custom tanks</li>
+            </ul>
+        </p>
+        <h3>Education</h3>
+        <p>
+            I was homeschool till 6th grade, when I started Dukes Digital Academy at Marlington High School.
+            I graduated Cum Laude in 2022, and enrolled at Kent State University at the Stark Campus that Autumn.
+        </p>
+        <h3>Religion</h3>
+        <p>
+            I am a member of the Paris Ave Christadelphian Ecclesia. (Put more stuff here)
+        </p>
     </section>
     <section id = projects class="content">
-        <h1>Here is the Projects section</h1>
+        <h1>Projects</h1>
+        <div class="project-grid">
+            <img src="https://picsum.photos/300" class="hoverable-item">
+            <img src="https://picsum.photos/300" class="hoverable-item">
+            <img src="https://picsum.photos/300" class="hoverable-item">
+            <img src="https://picsum.photos/300" class="hoverable-item">
+            <img src="https://picsum.photos/300" class="hoverable-item">
+            <img src="https://picsum.photos/300" class="hoverable-item">
+            <img src="https://picsum.photos/300" class="hoverable-item">
+            <img src="https://picsum.photos/300" class="hoverable-item">
+            <img src="https://picsum.photos/300" class="hoverable-item">
+            <img src="https://picsum.photos/300" class="hoverable-item">
+        </div>
     </section>
     <section id="resume" class="content">
-        <h1>Here is the Resume section</h1>
+        <h1>Resume</h1>
+        <div class="center-text">
+            <h3>Nate A. Craver</h3>
+            <p>6185 Valley Spring St. NE Hartville OH 44632</p>
+            <p>Email: <a href="mailto:natecraver@gmail.com">natecraver@gmail.com</a></p>
+            <p>Phone: (+1) 330-323-4303</p>
+        </div>
+
+        <h3>Education:</h3>
+        <ul>
+            <li>Kent State University, Kent OH</li>
+            <li>Bachelor of Science - Computer Science</li>
+            <li>Graduation - May 2026 (Expected)</li>
+            <li>GPA: 3.3</li>
+        </ul>
+        <h3>Technical Skills:</h3>
+        <ul>
+            <li>Languages (proficient): C++, C#, Rust (8 years experience)</li>
+            <li>Languages (semi-proficient): C, HTML, CSS, JavaScript, Java</li>
+            <li>Applications: Visual Studio, Visual Studio Code, Github, Unity, Bevy, Github Desktop, MS Word, Google Docs</li>
+            <li>Other: Markdown, Latex</li>
+        </ul>
+        <h3>Accomplishments:</h3>
+        <ul>
+            <li>Building a programming language</li>
+            <li>Building a minecraft clone (using rust and bevy)</li>
+            <li>Creating a basic game engine with c++ (using entt, opengl, and imgui)</li>
+            <li>Creating multiple complex video games in unity</li>
+            <li>Learning multiple programming languages on my own</li>
+            <li>RAUCSE: a utilities library on NuGet with 800+ installs</li>
+            <li>Programming an Entity Component System in c++, without using the c++ standard library</li>
+            <li>A bible study app (using Tauri, HTML, CSS, and JavaScript)</li>
+        </ul>
+        <h3>Work Experience:</h3>
+            <ul>
+                <li>Tutoring at KSU Stark for Science, Spanish, and Math</li>
+            </ul>
+        <h3>Volunteering:</h3>
+        <ul>
+            <li>Paris Ave Christadelphians: Groundskeeper (March 2023 - Present)</li>
+            <li>Yard work for various friends and family</li>
+            <li>Snow Shoveling in my neighborhood</li>
+            <li>Support around the house for my grandmother after the loss of my grandfather (January 2021 - Present)</li>
+            <li>Akron Food Bank</li>
+        </ul>
+        <h3>Honors and Certifications:</h3>
+        <ul>
+            <li>Graduated high school Cum Laude</li>
+            <li>Dean's list 4 semesters in a row at Kent State University</li>
+            <li>Four-year scholarship with Choose Ohio First for Computer Science</li>
+        </ul>
+        <div class="center-div">
+            <button id="resume-download" class="hoverable-item" onclick="download_resume()">Download Resume</button>
+        </div>
     </section>
     <section id="contact" class="content">
-        <h1>Here is the Contact Me section</h1>
+        <h1>Contact Me</h1>
     </section>
 </main>
 </body>
+<script>
+    function download_resume()
+    {
+        const link = document.createElement("a");
+        link.href = "resume/Nate Craver Resume.pdf";
+        link.download = "resume.pdf";
+        link.click();
+    }
+
+    function scroll_to(id)
+    {
+        const element = document.getElementById(id);
+        const offset = 60;
+        let target_position = element.getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo({
+            top: target_position - offset,
+            behavior: "smooth"
+        });
+    }
+</script>
 </html>

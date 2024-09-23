@@ -1,13 +1,30 @@
 * {
     font-family: 'Trebuchet MS', sans-serif;
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
     scroll-behavior: smooth;
 }
 
+:root {
+    --content-size: 90vw;
+    --project-image-spacing: 2.5vw;
+    --project-image-padding: 2.5vw;
+    --image-size: calc((var(--content-size) - var(--project-image-padding) * 2 - var(--project-image-spacing) * 2) / 3);
+}
+
+.center-text {
+    text-align: center;
+}
+
+.center-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 nav {
+    margin: 0px;
+    padding: 0px;
     position: fixed;
+    left: 0;
     top: 0;
     width: 100%;
     z-index: 10000;
@@ -15,6 +32,8 @@ nav {
 }
 
 nav ul {
+    margin: 0px;
+    padding-left: 0px;
     list-style-type: none;
     background-color: #333333;
     overflow: hidden;
@@ -41,13 +60,17 @@ nav ul li a:hover {
 main {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 0;    
+    margin: 0;
+    padding: 0;
     display: block;
     background-color: #ddd;
 }
 
 section {
     position: static;
+    margin: 0;
+    padding: 0;
 }
 
 #hero {
@@ -63,13 +86,17 @@ section {
 }
 
 #hero h1 {
-    margin-top: 10px;
+    margin-top: 20px;
     color: white;
+}
+
+#hero a {
+    width: 50%;
 }
 
 #hero img {
     border-radius: 10px;
-    width: 40%;
+    width: 100%;
     min-height: 250px;
     object-fit: cover;
 }
@@ -83,8 +110,70 @@ section {
     background-color: white;
     color: black;
     border-radius: 10px;
+    font-size: 20px;
+    padding-bottom: 30px;
+}
+
+.content > *:not(h1, .project-grid) {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.content h1 {
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #333333;
+    font-size: 30px;
+}
+
+.content ul {
+    margin-top: -15px;
 }
 
 .content:last-child {
     margin-bottom: 10px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: var(--image-size) var(--image-size) var(--image-size);
+    grid-auto-rows: var(--image-size);
+    padding: var(--project-image-padding);
+    gap: var(--project-image-spacing);
+}
+
+.project-grid img {
+    width: var(--image-size);
+    height: var(--image-size);
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.hoverable-item {
+    transition: all 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hoverable-item:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+#resume-download {
+    background-color: #333333;
+    text-decoration: none;
+    padding: 16px 18px;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    font-size: 20px;
+}
+
+#resume-download:hover {
+    background-color: #04AA6D;
+}
+
+#resume-download:active {
+    background-color: #444444;
 }
