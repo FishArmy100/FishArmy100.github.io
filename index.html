@@ -57,16 +57,42 @@
     <section id = projects class="content">
         <h1>Projects</h1>
         <div class="project-grid">
-            <img src="https://picsum.photos/300" class="hoverable-item">
-            <img src="https://picsum.photos/300" class="hoverable-item">
-            <img src="https://picsum.photos/300" class="hoverable-item">
-            <img src="https://picsum.photos/300" class="hoverable-item">
-            <img src="https://picsum.photos/300" class="hoverable-item">
-            <img src="https://picsum.photos/300" class="hoverable-item">
-            <img src="https://picsum.photos/300" class="hoverable-item">
-            <img src="https://picsum.photos/300" class="hoverable-item">
-            <img src="https://picsum.photos/300" class="hoverable-item">
-            <img src="https://picsum.photos/300" class="hoverable-item">
+            <div class="project-grid-item">
+                <div class="hoverable-item" onclick="go_to('https:\/\/github.com/FishArmy100/Architect-Game-Engine')">
+                    <img src="images/light-engine.svg">
+                    <p>Architect</p>
+                </div>
+            </div>
+            <div class="project-grid-item">
+                <div class="hoverable-item" onclick="go_to('https:\/\/github.com/FishArmy100/Ripple')">
+                    <img src="images/brands-r.svg">
+                    <p>Ripple</p>
+                </div>
+            </div>
+            <div class="project-grid-item">
+                <div class="hoverable-item" onclick="go_to('https:\/\/github.com/FishArmy100/ECS')">
+                    <img src="images/light-gears.svg">
+                    <p>ECS</p>
+                </div>
+            </div>
+            <div class="project-grid-item">
+                <div class="hoverable-item" onclick="go_to('https:\/\/github.com/FishArmy100/bible_study_app_v2')">
+                    <img src="images/light-book-bible.svg">
+                    <p>Bible App</p>
+                </div>
+            </div>
+            <div class="project-grid-item">
+                <div class="hoverable-item" onclick="go_to('https:\/\/github.com/FishArmy100/voxel_game')">
+                    <img src="images/light-cubes.svg">
+                    <p>Voxel Game</p>
+                </div>
+            </div>
+            <div class="project-grid-item">
+                <div class="hoverable-item" onclick="go_to('https:\/\/github.com/FishArmy100/Raucse')">
+                    <img src="images/light-conveyor-belt-arm.svg">
+                    <p>RAUSCE</p>
+                </div>
+            </div>
         </div>
     </section>
     <section id="resume" class="content">
@@ -127,10 +153,41 @@
     </section>
     <section id="contact" class="content">
         <h1>Contact Me</h1>
+        <div id="contacts-list-container">
+            <div id="contacts-list">
+                <div class="contact-item hoverable-item" onclick="go_to('https:\/\/github.com/FishArmy100')">
+                    <img src="images/brands-github.svg">
+                    <p>FishArmy100</p>
+                </div>
+                <div class="contact-item hoverable-item">
+                    <img src="images/brands-discord.svg">
+                    <p>FishArmy100</p>
+                </div>
+                <div class="contact-item hoverable-item" onclick="go_to('https:\/\/www.linkedin.com/in/nate-craver-10079425a/')">
+                    <img src="images/brands-linkedin.svg">
+                    <p>Nate Craver</p>
+                </div>
+                <div class="contact-item hoverable-item" onclick="go_to('mailto:natecraver@gmail.com')">
+                    <img src="images/light-mailbox-flag-up.svg">
+                    <p>natecraver@gmail.com</p>
+                </div>
+                <div class="contact-item hoverable-item">
+                    <img src="images/light-phone.svg" onclick="go_to('tel:+13303234303')">
+                    <p>(+1) 330-323-4303</p>
+                </div>
+            </div>
+        </div>
     </section>
 </main>
 </body>
 <script>
+    function go_to(href)
+    {
+        const link = document.createElement('a');
+        link.href = href;
+        link.click();
+    }
+
     function download_resume()
     {
         const link = document.createElement("a");

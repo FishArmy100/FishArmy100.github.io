@@ -5,9 +5,9 @@
 
 :root {
     --content-size: 90vw;
-    --project-image-spacing: 2.5vw;
+    --project-item-spacing: 2.5vw;
     --project-image-padding: 2.5vw;
-    --image-size: calc((var(--content-size) - var(--project-image-padding) * 2 - var(--project-image-spacing) * 2) / 3);
+    --grid-item-size: calc((var(--content-size) - var(--project-image-padding) * 2 - var(--project-item-spacing) * 2) / 3);
 }
 
 .center-text {
@@ -138,17 +138,49 @@ section {
 
 .project-grid {
     display: grid;
-    grid-template-columns: var(--image-size) var(--image-size) var(--image-size);
-    grid-auto-rows: var(--image-size);
+    grid-template-columns: var(--grid-item-size) var(--grid-item-size) var(--grid-item-size);
+    grid-auto-rows: var(--grid-item-size);
     padding: var(--project-image-padding);
-    gap: var(--project-image-spacing);
+    gap: var(--project-item-spacing);
 }
 
-.project-grid img {
-    width: var(--image-size);
-    height: var(--image-size);
+.project-grid-item {
+    width: var(--grid-item-size);
+    height: var(--grid-item-size);
+}
+
+.project-grid-item > div {
+    
+    background-color: #333333;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.project-grid-item img {
+    width: 80%;
+    height: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
     object-fit: cover;
     border-radius: 10px;
+    filter: invert(100%) brightness(2);
+    padding-bottom: 0px;
+}
+
+.project-grid-item > div:hover {
+    background-color: #04AA6D;
+}
+
+.project-grid-item > div:active {
+    background-color: #444444;
+}
+
+.project-grid-item p {
+    font-size: min(28px calc(20vw));
+    color: white;
+    text-align: center;
+    margin: 0px;
 }
 
 .hoverable-item {
@@ -175,5 +207,42 @@ section {
 }
 
 #resume-download:active {
+    background-color: #444444;
+}
+
+.contact-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333333;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin: auto;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.contact-item img {
+    margin: 0px 20px 0px 0px;
+    width: 60px;
+    height: 60px;
+    filter: invert(100%) brightness(2);
+}
+
+.contact-item p {
+    margin: 0px;
+    font-size: 40px;
+    color: white;
+}
+
+.contact-item:hover {
+    background-color: #04AA6D;
+}
+
+#contacts-list-container {
+    justify-content: center;
+}
+
+.contact-item:active {
     background-color: #444444;
 }
