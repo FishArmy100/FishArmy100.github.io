@@ -1,29 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Nate Craver Portfolio</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nate Craver Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-<nav>
-    <ul>
-        <li><a href="#hero">Home</a></li>
-        <li><a href="javascript:scroll_to('about');">About</a></li>
-        <li><a href="javascript:scroll_to('projects');">Projects</a></li>
-        <li><a href="javascript:scroll_to('resume');">Resume</a></li>
-        <li><a href="javascript:scroll_to('contact');">Contact Me</a></li>
-    </ul>
-</nav>
+<header>
+    <nav class="navbar navbar-expand-md navbar-light fixed-top">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="navbar-toggler-div">
+                    <span class="navbar-toggler-icon"></span>
+                </div>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:scroll_to(null)">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:scroll_to('about')">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:scroll_to('projects')">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:scroll_to('resume')">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:scroll_to('contact')">Contact Me</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
 <main>
-    <section id="hero">
-        <a href="images/portrait.png">
-            <img src="images/portrait.png" class="hoverable-item">
-        </a>    
-        <h1>Nathanael A. Craver</h1>
+    <section id="hero" class="d-flex">
+        <div class="card">
+            <img src="images/portrait.png" class="card-img-top grow-on-hover">
+            <div class="card-body">
+                <h5 class="card-title text-center">Nathanael A. Craver</h5>
+            </div>
+        </div>
     </section>
-    <section id="about" class="content">
-        <h1>About</h1>
+    <section id="about" class="sub-page">
+        <h1 class="text-center">About</h1>
+        <hr>
         <h3>Intro:</h3>
         <p>
             Hi! My name is Nate Craver, and I am a Software Developer from North East Ohio with 7 years of experience. 
@@ -54,50 +80,78 @@
             I am a member of the Paris Ave Christadelphian Ecclesia. (Put more stuff here)
         </p>
     </section>
-    <section id = projects class="content">
-        <h1>Projects</h1>
-        <div class="project-grid">
-            <div class="project-grid-item">
-                <div class="hoverable-item" onclick="go_to('https:\/\/github.com/FishArmy100/Architect-Game-Engine')">
-                    <img src="images/light-engine.svg">
-                    <p>Architect</p>
+    <section id="projects" class="sub-page">
+        <h1 class="text-center">Projects</h1>
+        <hr>
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+                <!-- Architect Project -->
+                <div class="col">
+                    <div class="card h-100 grow-on-hover" onclick="go_to('https:\/\/github.com/FishArmy100/Architect-Game-Engine')">
+                        <img src="images/light-engine.svg" class="card-img-top w-75 m-auto">
+                        <div class="card-body">
+                            <h5 class="card-title">Architect</h5>
+                            <p class="card-text">A simple game engine written in c++</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="project-grid-item">
-                <div class="hoverable-item" onclick="go_to('https:\/\/github.com/FishArmy100/Ripple')">
-                    <img src="images/brands-r.svg">
-                    <p>Ripple</p>
+                <!-- Ripple Project -->
+                <div class="col">
+                    <div class="card h-100 grow-on-hover" onclick="go_to('https:\/\/github.com/FishArmy100/Ripple')">
+                        <img src="images/brands-r.svg" class="card-img-top w-75 m-auto">
+                        <div class="card-body">
+                            <h5 class="card-title">Ripple</h5>
+                            <p class="card-text">A programming language similar to Rust</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="project-grid-item">
-                <div class="hoverable-item" onclick="go_to('https:\/\/github.com/FishArmy100/ECS')">
-                    <img src="images/light-gears.svg">
-                    <p>ECS</p>
+                <!-- ECS Project -->
+                <div class="col">
+                    <div class="card h-100 grow-on-hover" onclick="go_to('https:\/\/github.com/FishArmy100/ECS')">
+                        <img src="images/light-gears.svg" class="card-img-top w-75 m-auto">
+                        <div class="card-body">
+                            <h5 class="card-title">ECS</h5>
+                            <p class="card-text">A Entity Component System built in c++ without the c++ standard library</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="project-grid-item">
-                <div class="hoverable-item" onclick="go_to('https:\/\/github.com/FishArmy100/bible_study_app_v2')">
-                    <img src="images/light-book-bible.svg">
-                    <p>Bible App</p>
+                <!-- Bible App Project -->
+                <div class="col">
+                    <div class="card h-100 grow-on-hover" onclick="go_to('https:\/\/github.com/FishArmy100/bible_study_app_v2')">
+                        <img src="images/light-book-bible.svg" class="card-img-top w-75 m-auto">
+                        <div class="card-body">
+                            <h5 class="card-title">Ascribe</h5>
+                            <p class="card-text">A free and open source Bible study application</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="project-grid-item">
-                <div class="hoverable-item" onclick="go_to('https:\/\/github.com/FishArmy100/voxel_game')">
-                    <img src="images/light-cubes.svg">
-                    <p>Voxel Game</p>
+                <!-- Voxel Game Project -->
+                <div class="col">
+                    <div class="card h-100 grow-on-hover" onclick="go_to('https:\/\/github.com/FishArmy100/voxel_game')">
+                        <img src="images/light-cubes.svg" class="card-img-top w-75 m-auto">
+                        <div class="card-body">
+                            <h5 class="card-title">Voxel Game</h5>
+                            <p class="card-text">A attempt at a minecraft clone, both raytraced and meshed</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="project-grid-item">
-                <div class="hoverable-item" onclick="go_to('https:\/\/github.com/FishArmy100/Raucse')">
-                    <img src="images/light-conveyor-belt-arm.svg">
-                    <p>RAUSCE</p>
+                <!-- RAUSCE Project -->
+                <div class="col">
+                    <div class="card h-100 grow-on-hover" onclick="go_to('https:\/\/github.com/FishArmy100/Raucse')">
+                        <img src="images/light-conveyor-belt-arm.svg" class="card-img-top w-75 m-auto">
+                        <div class="card-body">
+                            <h5 class="card-title">RAUCSE</h5>
+                            <p class="card-text">Randomly Amassed Utilities for C Sharp Engineering</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <section id="resume" class="content">
-        <h1>Resume</h1>
-        <div class="center-text">
+    <section id="resume" class="sub-page">
+        <h1 class="text-center">Resume</h1>
+        <hr>
+        <div class="text-center">
             <h3>Nate A. Craver</h3>
             <p>6185 Valley Spring St. NE Hartville OH 44632</p>
             <p>Email: <a href="mailto:natecraver@gmail.com">natecraver@gmail.com</a></p>
@@ -147,40 +201,86 @@
             <li>Dean's list 4 semesters in a row at Kent State University</li>
             <li>Four-year scholarship with Choose Ohio First for Computer Science</li>
         </ul>
-        <div class="center-div">
-            <button id="resume-download" class="hoverable-item" onclick="download_resume()">Download Resume</button>
+        <hr>
+        <div class="text-center">
+            <button id="resume-download" class="btn btn-primary grow-on-hover" onclick="download_resume()">Download Resume</button>
         </div>
     </section>
-    <section id="contact" class="content">
-        <h1>Contact Me</h1>
-        <div id="contacts-list-container">
-            <div id="contacts-list">
-                <div class="contact-item hoverable-item" onclick="go_to('https:\/\/github.com/FishArmy100')">
-                    <img src="images/brands-github.svg">
-                    <p>FishArmy100</p>
+    <section id="contact" class="sub-page">
+        <h1 class="text-center">Contact Me</h1>
+        <hr>
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+                <!-- Github -->
+                <div class="col">
+                    <div class="card h-100 grow-on-hover" onclick="go_to('https:\/\/github.com/FishArmy100')">
+                        <img src="images/brands-github.svg" class="card-img-top w-75 m-auto">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">FishArmy100</h5>
+                        </div>
+                    </div>
                 </div>
-                <div class="contact-item hoverable-item">
-                    <img src="images/brands-discord.svg">
-                    <p>FishArmy100</p>
+                <!-- Email -->
+                <div class="col">
+                    <div class="card h-100 grow-on-hover" onclick="go_to('mailto:natecraver@gmail.com')">
+                        <img src="images/light-mailbox-flag-up.svg" class="card-img-top w-75 m-auto">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">natecraver@gmail.com</h5>
+                        </div>
+                    </div>
                 </div>
-                <div class="contact-item hoverable-item" onclick="go_to('https:\/\/www.linkedin.com/in/nate-craver-10079425a/')">
-                    <img src="images/brands-linkedin.svg">
-                    <p>Nate Craver</p>
+                <!-- Phone -->
+                <div class="col">
+                    <div class="card h-100 grow-on-hover" onclick="go_to('tel:+13303234303')">
+                        <img src="images/light-phone.svg" class="card-img-top w-75 m-auto">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">(+1) 330-323-4304</h5>
+                        </div>
+                    </div>
                 </div>
-                <div class="contact-item hoverable-item" onclick="go_to('mailto:natecraver@gmail.com')">
-                    <img src="images/light-mailbox-flag-up.svg">
-                    <p>natecraver@gmail.com</p>
+                <!-- Linkedin -->
+                <div class="col">
+                    <div class="card h-100 grow-on-hover" onclick="go_to('https:\/\/www.linkedin.com/in/nate-craver-10079425a/')">
+                        <img src="images/brands-linkedin.svg" class="card-img-top w-75 m-auto">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Nate Craver</h5>
+                        </div>
+                    </div>
                 </div>
-                <div class="contact-item hoverable-item">
-                    <img src="images/light-phone.svg" onclick="go_to('tel:+13303234303')">
-                    <p>(+1) 330-323-4303</p>
+                <!-- Discord -->
+                <div class="col">
+                    <div class="card h-100 grow-on-hover" onclick="go_to(null)">
+                        <img src="images/brands-discord.svg" class="card-img-top w-75 m-auto">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">FishArmy100</h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- Website -->
+                <div class="col">
+                    <div class="card h-100 grow-on-hover" onclick="go_to('#')">
+                        <img src="images/light-window.svg" class="card-img-top w-75 m-auto">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Nate Craver</h5>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 </main>
-</body>
+<footer class="text-white text-center py-3">
+    <div class="container">
+        <p class="mb-0">&copy; 2024 Nathanael A. Craver; All Rights Reserved.</p>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <script>
+    const navbarCollapse = document.getElementById('navbarNav');
+    const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+        toggle: false
+    });
+    
     function go_to(href)
     {
         const link = document.createElement('a');
@@ -198,13 +298,25 @@
 
     function scroll_to(id)
     {
-        const element = document.getElementById(id);
-        const offset = 60;
-        let target_position = element.getBoundingClientRect().top + window.pageYOffset;
-        window.scrollTo({
-            top: target_position - offset,
-            behavior: "smooth"
-        });
+        bsCollapse.hide();
+        if (id === null)
+        {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+        else 
+        {
+            const element = document.getElementById(id);
+            const offset = 60;
+            let target_position = element.getBoundingClientRect().top + window.pageYOffset;
+            window.scrollTo({
+                top: target_position - offset,
+                behavior: "smooth"
+            });
+        }
     }
 </script>
+</body>
 </html>
