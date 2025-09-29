@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nate Craver's personal website and portfolio">
+    <link rel="icon" type="image/x-icon" href="./favicon.svg">
     <title>Nate Craver Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
@@ -52,7 +54,7 @@
         <hr>
         <h3>Intro:</h3>
         <p>
-            Hi! My name is Nate Craver, and I am a Software Developer from North East Ohio with 7 years of experience. 
+            Hi! My name is Nate Craver, and I am a Software Developer from North East Ohio with 8 years of experience. 
             I specialize in backend development, however I do have some experience with frontend development. 
             I also am currently looking for summer internship, or employment for a software development position.
         </p>
@@ -89,7 +91,7 @@
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
                 <!-- Architect Project -->
                 <div class="col">
-                    <div class="card h-100 grow-on-hover" onclick="go_to('https:\/\/github.com/FishArmy100/Architect-Game-Engine')">
+                    <div class="card h-100 grow-on-hover" style="cursor: pointer;" onclick="go_to('https:\/\/github.com/FishArmy100/Architect-Game-Engine')">
                         <img src="images/light-engine.svg" class="card-img-top w-75 m-auto">
                         <div class="card-body">
                             <h5 class="card-title">Architect</h5>
@@ -99,7 +101,7 @@
                 </div>
                 <!-- Ripple Project -->
                 <div class="col">
-                    <div class="card h-100 grow-on-hover" onclick="go_to('https:\/\/github.com/FishArmy100/Ripple')">
+                    <div class="card h-100 grow-on-hover" style="cursor: pointer;" onclick="go_to('https:\/\/github.com/FishArmy100/Ripple')">
                         <img src="images/brands-r.svg" class="card-img-top w-75 m-auto">
                         <div class="card-body">
                             <h5 class="card-title">Ripple</h5>
@@ -107,9 +109,19 @@
                         </div>
                     </div>
                 </div>
+                <!-- Riven Project -->
+                <div class="col">
+                    <div class="card h-100 grow-on-hover" style="cursor: pointer;" onclick="go_to('https:\/\/github.com/FishArmy100/riven')">
+                        <img src="images/brands-r.svg" class="card-img-top w-75 m-auto">
+                        <div class="card-body">
+                            <h5 class="card-title">Riven</h5>
+                            <p class="card-text">A programming language similar to C (written in 4 weeks)</p>
+                        </div>
+                    </div>
+                </div>
                 <!-- ECS Project -->
                 <div class="col">
-                    <div class="card h-100 grow-on-hover" onclick="go_to('https:\/\/github.com/FishArmy100/ECS')">
+                    <div class="card h-100 grow-on-hover" style="cursor: pointer;" onclick="go_to('https:\/\/github.com/FishArmy100/ECS')">
                         <img src="images/light-gears.svg" class="card-img-top w-75 m-auto">
                         <div class="card-body">
                             <h5 class="card-title">ECS</h5>
@@ -119,7 +131,7 @@
                 </div>
                 <!-- Bible App Project -->
                 <div class="col">
-                    <div class="card h-100 grow-on-hover" onclick="go_to('https:\/\/github.com/FishArmy100/bible_study_app_v2')">
+                    <div class="card h-100 grow-on-hover" style="cursor: pointer;" onclick="go_to('https:\/\/github.com/FishArmy100/bible_study_app_v2')">
                         <img src="images/light-book-bible.svg" class="card-img-top w-75 m-auto">
                         <div class="card-body">
                             <h5 class="card-title">Ascribe</h5>
@@ -127,9 +139,19 @@
                         </div>
                     </div>
                 </div>
+                <!-- Ascribe Rework Project -->
+                <div class="col">
+                    <div class="card h-100 grow-on-hover" style="cursor: pointer;" onclick="go_to('https:\/\/github.com/FishArmy100/Ascribe')">
+                        <img src="images/light-book-bible.svg" class="card-img-top w-75 m-auto">
+                        <div class="card-body">
+                            <h5 class="card-title">Ascribe 1.0</h5>
+                            <p class="card-text">A rewrite of Ascribe in React + MaterialUI</p>
+                        </div>
+                    </div>
+                </div>
                 <!-- Voxel Game Project -->
                 <div class="col">
-                    <div class="card h-100 grow-on-hover" onclick="go_to('https:\/\/github.com/FishArmy100/voxel_game')">
+                    <div class="card h-100 grow-on-hover" style="cursor: pointer;" onclick="go_to('https:\/\/github.com/FishArmy100/voxel_game')">
                         <img src="images/light-cubes.svg" class="card-img-top w-75 m-auto">
                         <div class="card-body">
                             <h5 class="card-title">Voxel Game</h5>
@@ -139,7 +161,7 @@
                 </div>
                 <!-- RAUSCE Project -->
                 <div class="col">
-                    <div class="card h-100 grow-on-hover" onclick="go_to('https:\/\/github.com/FishArmy100/Raucse')">
+                    <div class="card h-100 grow-on-hover" style="cursor: pointer;" onclick="go_to('https:\/\/github.com/FishArmy100/Raucse')">
                         <img src="images/light-conveyor-belt-arm.svg" class="card-img-top w-75 m-auto">
                         <div class="card-body">
                             <h5 class="card-title">RAUCSE</h5>
@@ -169,14 +191,15 @@
         </ul>
         <h3>Technical Skills:</h3>
         <ul>
-            <li>Languages (proficient): C++, C#, Rust (8 years experience)</li>
-            <li>Languages (semi-proficient): C, HTML, CSS, JavaScript, Java</li>
-            <li>Applications: Visual Studio, Visual Studio Code, Github, Unity, Bevy, Github Desktop, MS Word, Google Docs</li>
+            <li>Languages (proficient): C++, C#, Rust (8 years experience), HTML, CSS, TypeScript, JavaScript, LESS</li>
+            <li>Languages (semi-proficient): C, Java, Python</li>
+            <li>Applications: Visual Studio, Visual Studio Code, Github, Unity, Github Desktop, MS Word, Google Docs</li>
+            <li>Frameworks: Tauri, Bevy, React</li>
             <li>Other: Markdown, Latex</li>
         </ul>
         <h3>Accomplishments:</h3>
         <ul>
-            <li>Building a programming language</li>
+            <li>Building two programming language, one in the course of 4 weeks</li>
             <li>Building a minecraft clone (using rust and bevy)</li>
             <li>Creating a basic game engine with c++ (using entt, opengl, and imgui)</li>
             <li>Creating multiple complex video games in unity</li>
@@ -188,6 +211,7 @@
         <h3>Work Experience:</h3>
             <ul>
                 <li>Tutoring at KSU Stark for Science, Spanish, and Math</li>
+                <li>Interning at <a href="https://www.gbscorp.com/">GBS</a> for 6 months as a software development intern (May 2025-present)</li>
             </ul>
         <h3>Volunteering:</h3>
         <ul>
@@ -200,7 +224,7 @@
         <h3>Honors and Certifications:</h3>
         <ul>
             <li>Graduated high school Cum Laude</li>
-            <li>Dean's list 4 semesters in a row at Kent State University</li>
+            <li>Dean's list six consecutive semesters in a row at Kent State University</li>
             <li>Four-year scholarship with Choose Ohio First for Computer Science</li>
         </ul>
         <hr>
@@ -215,7 +239,7 @@
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
                 <!-- Github -->
                 <div class="col">
-                    <div class="card h-100 grow-on-hover" onclick="go_to('https:\/\/github.com/FishArmy100')">
+                    <div class="card h-100 grow-on-hover" style="cursor: pointer;" onclick="go_to('https:\/\/github.com/FishArmy100')">
                         <img src="images/brands-github.svg" class="card-img-top w-75 m-auto">
                         <div class="card-body">
                             <h5 class="card-title text-center">FishArmy100</h5>
@@ -224,7 +248,7 @@
                 </div>
                 <!-- Email -->
                 <div class="col">
-                    <div class="card h-100 grow-on-hover" onclick="go_to('mailto:natecraver@gmail.com')">
+                    <div class="card h-100 grow-on-hover" style="cursor: pointer;" onclick="go_to('mailto:natecraver@gmail.com')">
                         <img src="images/light-mailbox-flag-up.svg" class="card-img-top w-75 m-auto">
                         <div class="card-body">
                             <h5 class="card-title text-center">natecraver@gmail.com</h5>
@@ -233,7 +257,7 @@
                 </div>
                 <!-- Phone -->
                 <div class="col">
-                    <div class="card h-100 grow-on-hover" onclick="go_to('tel:+13303234303')">
+                    <div class="card h-100 grow-on-hover" style="cursor: pointer;" onclick="go_to('tel:+13303234303')">
                         <img src="images/light-phone.svg" class="card-img-top w-75 m-auto">
                         <div class="card-body">
                             <h5 class="card-title text-center">(+1) 330-323-4304</h5>
@@ -242,7 +266,7 @@
                 </div>
                 <!-- Linkedin -->
                 <div class="col">
-                    <div class="card h-100 grow-on-hover" onclick="go_to('https:\/\/www.linkedin.com/in/nate-craver-10079425a/')">
+                    <div class="card h-100 grow-on-hover" style="cursor: pointer;" onclick="go_to('https:\/\/www.linkedin.com/in/nate-craver-10079425a/')">
                         <img src="images/brands-linkedin.svg" class="card-img-top w-75 m-auto">
                         <div class="card-body">
                             <h5 class="card-title text-center">Nate Craver</h5>
@@ -251,7 +275,7 @@
                 </div>
                 <!-- Discord -->
                 <div class="col">
-                    <div class="card h-100 grow-on-hover" onclick="go_to(null)">
+                    <div class="card h-100 grow-on-hover" style="cursor: pointer;" onclick="go_to(null)">
                         <img src="images/brands-discord.svg" class="card-img-top w-75 m-auto">
                         <div class="card-body">
                             <h5 class="card-title text-center">FishArmy100</h5>
@@ -260,7 +284,7 @@
                 </div>
                 <!-- Website -->
                 <div class="col">
-                    <div class="card h-100 grow-on-hover" onclick="go_to('#')">
+                    <div class="card h-100 grow-on-hover" style="cursor: pointer;" onclick="go_to('#')">
                         <img src="images/light-window.svg" class="card-img-top w-75 m-auto">
                         <div class="card-body">
                             <h5 class="card-title text-center">Nate Craver</h5>
